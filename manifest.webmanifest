@@ -1,6 +1,6 @@
 {
-    "name": "Enhertu Quiz Game",
-    "short_name": "Enhertu Quiz Game",
+    "name": "Enhertu Sorting Game",
+    "short_name": "Enhertu Sorting Game",
     "start_url": "index.html",
     "display": "fullscreen",
     "background_color": "#231F20",
