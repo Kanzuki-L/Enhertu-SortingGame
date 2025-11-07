@@ -20,7 +20,7 @@
       <div id="unity-warning"></div>
     </div>
     <script>
-      // register SW same as baseline
+      // same as baseline: register SW
       window.addEventListener("load", function () {
         if ("serviceWorker" in navigator) {
           navigator.serviceWorker.register("ServiceWorker.js");
@@ -33,7 +33,7 @@
       var progressBarFull = document.querySelector("#unity-progress-bar-full");
       var warningBanner = document.querySelector("#unity-warning");
 
-      // same banner function as baseline
+      // same banner pattern as original baseline
       function unityShowBanner(msg, type) {
         function updateBannerVisibility() {
           warningBanner.style.display = warningBanner.children.length ? "block" : "none";
@@ -57,7 +57,7 @@
       var loaderUrl = buildUrl + "/4427cdeddbb4bc32d99c9f5581a48b5c.loader.js";
       var config = {
         arguments: [],
-        dataUrl: buildUrl + "/2e0f099e7c970d865b956c6f36ae5870.data.unityweb",
+        dataUrl: buildUrl + "/638100259d213f26d67cd5da34057cf4.data.unityweb",
         frameworkUrl: buildUrl + "/61a6a7b5d6a774fc8870f169c261c1e7.framework.js.unityweb",
         codeUrl: buildUrl + "/a8a58d7ef9883a5e0a4c16e3c3cffccb.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
@@ -65,9 +65,10 @@
         productName: "Enhertu Sorting Game",
         productVersion: "1.0.2",
         showBanner: unityShowBanner
+        // you can re-enable errorHandler here if needed
       };
 
-      // mobile viewport same as baseline
+      // mobile viewport (same pattern)
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         var meta = document.createElement("meta");
         meta.name = "viewport";
